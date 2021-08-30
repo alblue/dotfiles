@@ -52,7 +52,9 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 highlight SpellBad ctermfg=red ctermbg=none cterm=underline,bold gui=undercurl
 match ExtraWhitespace /\s\+$/
 
-filetype plugin on
+if has('filetype')
+  filetype plugin on
+endif
 
 " When pasting, avoid problems in text
 inoremap [200~ <nop>
@@ -133,8 +135,10 @@ set incsearch
 set laststatus=2
 " Display → for tabs,· for non breaking space and trailing spaces
 set list listchars=tab:→\ ,trail:·,nbsp:·
-" Enable the mouse for all modes
-set mouse=a
+" Enable the mouse for all modes, if it exists
+if has('mouse')
+  set mouse=a
+endif
 " Do not expand tabs
 set noexpandtab
 set nomodeline
@@ -153,5 +157,7 @@ set tabstop=4 shiftwidth=4
 set undofile undodir=~/.vim/undodir
 
 " Enable syntax automatically
-silent! syntax enable
+if has('syntax')
+  silent! syntax enable
+endif
 
