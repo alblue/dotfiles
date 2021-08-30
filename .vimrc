@@ -7,6 +7,28 @@
 " ---
 " Defines standard vim settings usable on many machines
 
+" Enable embedded code formatting in markdown files
+let g:markdown_fenced_languages = [
+\  'bash',
+\  'c',
+\  'cs',
+\  'cpp',
+\  'css',
+\  'html',
+\  'go',
+\  'java',
+\  'javascript',
+\  'objc',
+\  'proto',
+\  'python',
+\  'rust',
+\  'sh',
+\  'swift',
+\  'xml',
+\  'xslt',
+\  'zsh',
+\ ]
+
 " Autocmd are run when switching between different buffers, and also
 " used to highlight misspelled words or additional whitespace
 
