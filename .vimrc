@@ -111,6 +111,9 @@ nnoremap N Nzz
 " Go to next search match, put line in middle
 nnoremap n nzz
 
+" Map Y to y$ to follow D and C
+map Y y$
+
 " ---
 " Settings
 " ---
@@ -139,9 +142,14 @@ set list listchars=tab:→\ ,trail:·,nbsp:·
 if has('mouse')
   set mouse=a
 endif
+" Disable compatibility mode
+set nocompatible
 " Do not expand tabs
 set noexpandtab
 set nomodeline
+" Don't jump to the first character of a line
+set nostartofline
+" Use at as a shortmessage format
 set shortmess=at
 " When searching, if lower case match any case, otherwise exact match
 set smartcase
@@ -155,6 +163,8 @@ set t_BE=
 set tabstop=4 shiftwidth=4
 " Enable undo directory/files
 set undofile undodir=~/.vim/undodir
+" Allow wildcard matching for commands at : ex command line
+set wildmenu
 
 " Enable syntax automatically
 if has('syntax')
