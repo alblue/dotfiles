@@ -1,0 +1,23 @@
+[user]
+	name = Alex Blewitt
+	email = alex.blewitt@gmail.com
+[alias]
+	touch = "!touch $1; git add $1; git commit -m "$1" $1"
+	list = show --pretty=\"format:\" --name-only
+	pca = "!git add -A .; git commit -m \"$*\"; git push; echo >/dev/null "
+[core]
+	editor = /usr/bin/vim
+	excludesfile = ~/.gitignore
+[credential]
+	helper = store
+[diff]
+	noprefix = true
+[protocol]
+	version = 2
+[pull]
+	rebase = true
+[rebase]
+	autoSquash = true
+	autoStash = true
+[rerere]
+	enabled = true

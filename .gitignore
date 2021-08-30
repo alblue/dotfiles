@@ -1,0 +1,4 @@
+# Ignore files for macOS
+*.swp
+*~
+.DS_Store
