@@ -124,6 +124,10 @@ set autoindent smartindent
 set autoread
 " Yank copies to default system clipboard
 set clipboard=unnamed
+" Use utf-8 for the default encoding
+set encoding=utf-8
+" Allow all file formats but prefer unix
+set fileformats=unix,dos,mac
 " By default fold to level 2
 set foldlevelstart=2
 " Fold based on syntax
@@ -138,6 +142,8 @@ set incsearch
 set laststatus=2
 " Display → for tabs,· for non breaking space and trailing spaces
 set list listchars=tab:→\ ,trail:·,nbsp:·
+" Use magic regular expressions
+set magic
 " Enable the mouse for all modes, if it exists
 if has('mouse')
   set mouse=a
