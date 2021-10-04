@@ -111,6 +111,12 @@ nnoremap N Nzz
 " Go to next search match, put line in middle
 nnoremap n nzz
 
+" Don't grab the data in the buffer
+nnoremap C "_C
+nnoremap D "_D
+nnoremap c "_c
+nnoremap d "_d
+
 " Map Y to y$ to follow D and C
 map Y y$
 
