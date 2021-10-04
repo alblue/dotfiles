@@ -21,6 +21,13 @@ alias serve3="python3 -m http.server "
 alias serve="python -m SimpleHTTPServer "
 # Windows uses 'start', mac uses 'open' to open files ...
 alias start=open
+# Open up a new terminal
+alias new="open -a Terminal \$PWD"
+# Set up link to code if it exists
+if [ -x /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code ]
+then
+  alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
+fi
 
 # Run commands (e.g. ls) in color
 export CLICOLOR=true
