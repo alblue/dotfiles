@@ -5,6 +5,7 @@
 	touch = "!touch $1; git add $1; git commit -m "$1" $1"
 	list = show --pretty=\"format:\" --name-only
 	pca = "!git add -A .; git commit -m \"$*\"; git push; echo >/dev/null "
+	root = rev-parse --show-toplevel
 [core]
 	editor = /usr/bin/vim
 	excludesfile = ~/.gitignore
