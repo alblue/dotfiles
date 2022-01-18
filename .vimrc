@@ -1,12 +1,11 @@
 " Vim dotfile
 " ---
-" Copyright (c) 2021 Alex Blewitt
+" Copyright (c) 2022 Alex Blewitt
 "
 " Released under the MIT License SPDX:MIT
 " See LICENSE.txt for more information
 " ---
 " Defines standard vim settings usable on many machines
-
 " Enable embedded code formatting in markdown files
 let g:markdown_fenced_languages = [
 \  'bash',
@@ -30,9 +29,9 @@ let g:markdown_fenced_languages = [
 \ ]
 
 " Autocmd are run when switching between different buffers, and also
-" used to highlight misspelled words or additional whitespace
+" used to highlight misspelled words or additional white space
 
-" Match trailing whitespace when entering a buffer
+" Match trailing white space when entering a buffer
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 " And clear it again afterwards
 autocmd BufWinLeave * call clearmatches()
@@ -47,7 +46,7 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd QuickFixCmdPost *grep* cwindow
 
-" Color flagging for exra whitespace and misspelled files
+" Color flagging for extra white space and misspelled files
 highlight ExtraWhitespace ctermbg=red guibg=red
 highlight SpellBad ctermfg=red ctermbg=none cterm=underline,bold gui=undercurl
 match ExtraWhitespace /\s\+$/
@@ -186,3 +185,7 @@ if has('syntax')
   silent! syntax enable
 endif
 
+" Enable spell checking in CamelCase words
+if exists('+spelloptions')
+  set spelloptions+=camel
+endif
