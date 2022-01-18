@@ -189,3 +189,18 @@ endif
 if exists('+spelloptions')
   set spelloptions+=camel
 endif
+
+" Sensible wrapping on words and use continuation character
+set linebreak
+" Shows a continuation character on a wrapped line
+if has('multi_byte_encoding')
+  set showbreak=↪︎
+  set listchars+=extends:»,precedes:«
+else
+  set showbreak=»
+  set listchars+=extends:>,precedes:<
+endif
+" When wrapping, adopt indentation level of the indent
+if exists('+breakindent')
+  set breakindent
+endif
