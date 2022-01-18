@@ -169,6 +169,9 @@ set smartcase
 set smarttab
 " Set status line details
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+" Open new splits to the below and right
+set splitbelow
+set splitright
 " Enable bracketed paste mode
 set t_BE=
 " Use four spaces for tabs by default
