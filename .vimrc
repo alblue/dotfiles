@@ -157,9 +157,12 @@ endif
 set nocompatible
 " Do not expand tabs
 set noexpandtab
+" Don't interpret modeline flags in files
 set nomodeline
 " Don't jump to the first character of a line
 set nostartofline
+" Don't enable octal numbers for incrementing with ^A or ^X
+set nrformats-=octal
 " Use at as a shortmessage format
 set shortmess=at
 " When searching, if lower case match any case, otherwise exact match
