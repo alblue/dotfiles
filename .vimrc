@@ -78,7 +78,7 @@ nnoremap <Leader>Q :q!<Return>
 nnoremap <Leader>q :q!
 
 " Switch to other buffer or tab complete
-nnoremap <Leader>b :buffer<Space>
+nnoremap <Leader>b :buffers<CR>:buffer<Space>
 
 " Go back to previous selection (using gv)
 nnoremap <Leader>v gv
